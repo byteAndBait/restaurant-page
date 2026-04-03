@@ -1,22 +1,37 @@
-import landingImageSrc from "../assets/images/landing.png";
+import landingImageSrc from "../assets/images/LosPollosHermanosLandingImage.png";
+import "./home.css"
 
-export default function home(){
-const landingContentElement = document.querySelector("#content")
+// Helpers
+import { makeContainer } from "./helpers.js";
 
-const landingImage = document.createElement("img")
-landingImage.src = landingImageSrc;
 
-const landingText = document.createElement("div")
-landingText.className = "text"
 
-const landingTextTitle = document.createElement("h1")
-landingTextTitle.textContent = "We serve our customer EXCEPTIONAL food"
-const landingTextDescription = document.createElement("p")
-landingTextDescription.textContent = "Hello! And welcome to the Los Pollos Hermanos family!"
 
-landingText.appendChild(landingTextTitle)
-landingText.appendChild(landingTextDescription)
+export default function home() {
+    const landingContentElement = document.querySelector("#content")
+    landingContentElement.classList.add("home")
+    const container = makeContainer()
 
-landingContentElement.appendChild(landingImage)
-landingContentElement.appendChild(landingText)
+    const landingImage = document.createElement("img")
+    landingImage.className = "landingImg"
+    landingImage.src = landingImageSrc;
+    const landingText = document.createElement("div")
+    landingText.className = "text"
+
+    const landingTextTitle = document.createElement("h1")
+    landingTextTitle.textContent = "We serve our customers "
+    const textSpan = document.createElement("span")
+    textSpan.textContent = "Exceptional "
+    landingTextTitle.appendChild(textSpan)
+    landingTextTitle.appendChild( document.createTextNode(" food"))
+    const landingTextDescription = document.createElement("p")
+    landingTextDescription.textContent = "Hello! And welcome to the Los Pollos Hermanos family!"
+
+    landingText.appendChild(landingTextTitle)
+    landingText.appendChild(landingTextDescription)
+
+    container.appendChild(landingImage)
+    container.appendChild(landingText)
+
+    landingContentElement.appendChild(container)
 }
