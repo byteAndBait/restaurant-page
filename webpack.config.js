@@ -17,7 +17,7 @@ export default {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
-  ],
+  ],	
 	module: {
 		rules: [
 			{

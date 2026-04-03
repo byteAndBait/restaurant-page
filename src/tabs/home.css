@@ -1,0 +1,29 @@
+.home .container{
+    padding: var(--section-padding) 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeAnimation 2s ease-out;
+}
+.home .container img{
+    width: 35rem
+}
+.home .container .text{
+    width: 100ch
+}
+.home .container .text h1{
+    font-size: clamp(3rem , 5vw , 4rem);
+    span{
+        color: orange
+    }
+}
+.home .container .text p{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+@media screen and (max-width:800px) {
+    .home .container img{
+        display: none;
+    }
+}
