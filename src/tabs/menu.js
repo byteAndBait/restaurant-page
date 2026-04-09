@@ -1,13 +1,13 @@
 import "./menu.css"
 import { makeContainer } from "./helpers.js"
-export default function menu(){
+export default function menu() {
     const MenuContentElement = document.querySelector("#content")
     MenuContentElement.classList.add("menu")
     const container = makeContainer()
 
     const mealCard = document.createElement("div")
     mealCard.classList.add("mealCard")
-    
+
     const mealImage = document.createElement("div")
     mealImage.classList.add("mealImage")
 
@@ -23,8 +23,8 @@ export default function menu(){
     const mealRatingStarIcon = document.createElement("i")
     mealRatingStarIcon.className = "fa-solid fa-star"
 
-    for(let i =0;i<5;i++){
-            mealRating.appendChild(mealRatingStarIcon.cloneNode(1))
+    for (let i = 0; i < 5; i++) {
+        mealRating.appendChild(mealRatingStarIcon.cloneNode(1))
     }
 
     const mealRatingTotalNumber = document.createElement("span")
@@ -45,36 +45,38 @@ export default function menu(){
 
 
     let animationDelay = 0;
-    function appendMeal(){
+    function appendMeal() {
         mealText.appendChild(mealName)
-        
+
         mealRating.appendChild(mealRatingTotalNumber)
         mealText.appendChild(mealRating)
         mealText.appendChild(mealDescription)
         mealText.appendChild(mealPrice)
         mealText.appendChild(mealOrderButton)
-
         mealCard.appendChild(mealImage)
         mealCard.appendChild(mealText)
-        const stars = mealRating.querySelectorAll("i").length - (5 - parseInt(mealRating.querySelector("span").textContent)) 
-        mealRating.querySelectorAll("i").forEach((ele)=>{
+
+        const stars = mealRating.querySelectorAll("i").length - (5 - parseInt(mealRating.querySelector("span").textContent))
+        mealRating.querySelectorAll("i").forEach((ele) => {
             ele.classList.remove("bright")
         })
-        for(let i=0; i<stars;i++){
+        for (let i = 0; i < stars; i++) {
             mealRating.querySelectorAll("i")[i].classList.add("bright")
         }
         mealCard.style.animationDuration = `${1000 + animationDelay}ms`
 
         animationDelay += 1000
         container.appendChild(mealCard.cloneNode(true))
-      
     }
+
+
     // 1st Meal : Rancheros Platters
     mealImage.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROSvk3hMMhFkeMMQ1XpFI9FHRzsBqQTXQi0Q&s')"
+
     mealName.textContent = "Rancheros Platters"
     mealDescription.textContent = "The Rancheros Platter is a hearty breakfast staple featuring fried eggs served over lightly fried corn tortillas and smothered in a savory, spiced tomato-chili sauce."
     mealRatingTotalNumber.textContent = " 5"
-    mealPrice.textContent= "35.5$"
+    mealPrice.textContent = "35.5$"
 
     appendMeal()
 
@@ -83,7 +85,7 @@ export default function menu(){
     mealName.textContent = "American Platters"
     mealDescription.textContent = "American platters are celebrated for their generous portions, typically centering on a hearty protein like fried chicken or meatloaf paired with classic comfort sides. These meals define the traditional diner experience."
     mealRatingTotalNumber.textContent = " 3"
-    mealPrice.textContent= "45.5$"
+    mealPrice.textContent = "45.5$"
 
     appendMeal()
 
@@ -93,20 +95,19 @@ export default function menu(){
     mealName.textContent = "Mexico Burritos"
     mealDescription.textContent = "New Mexico breakfast burritos are distinguished by their use of authentic roasted green or red Hatch chilies, which provide a unique smoky heat to the filling of eggs, potatoes, and meat. Often served with both sauces."
     mealRatingTotalNumber.textContent = " 5"
-    mealPrice.textContent= "68.5$"
+    mealPrice.textContent = "68.5$"
 
     appendMeal()
 
-    
+
     // 4th Meal : Pollos Burritos
-    mealImage.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7W_U-OK1EYpQmRbC9_87tuOmr49Nf3eUcXw&s')"  
+    mealImage.style.backgroundImage = "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7W_U-OK1EYpQmRbC9_87tuOmr49Nf3eUcXw&s')"
     mealName.textContent = "Pollos Burritos"
     mealDescription.textContent = "Pollos burritos are a fan favorite, featuring succulent, marinated grilled chicken wrapped tightly in a soft flour tortilla with savory fillings like beans, rice, and melted cheese. Often paired with a signature zesty salsa."
     mealRatingTotalNumber.textContent = " 4"
-    mealPrice.textContent= "48.5$"
-
+    mealPrice.textContent = "48.5$"
     appendMeal()
-    
+
     MenuContentElement.appendChild(container)
 
 }

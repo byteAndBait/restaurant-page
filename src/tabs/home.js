@@ -8,8 +8,8 @@ import { makeContainer } from "./helpers.js";
 
 
 export default function home() {
-    const landingContentElement = document.querySelector("#content")
-    landingContentElement.classList.add("home")
+    const contentElement = document.querySelector("#content")
+    contentElement.classList.add("home")
     const container = makeContainer()
 
     const landingImage = document.createElement("img")
@@ -23,7 +23,7 @@ export default function home() {
     const textSpan = document.createElement("span")
     textSpan.textContent = "Exceptional "
     landingTextTitle.appendChild(textSpan)
-    landingTextTitle.appendChild( document.createTextNode(" food"))
+    landingTextTitle.appendChild(document.createTextNode(" food"))
     const landingTextDescription = document.createElement("p")
     landingTextDescription.textContent = "Hello! And welcome to the Los Pollos Hermanos family!"
 
@@ -33,5 +33,5 @@ export default function home() {
     container.appendChild(landingImage)
     container.appendChild(landingText)
 
-    landingContentElement.appendChild(container)
+    contentElement.appendChild(container)
 }

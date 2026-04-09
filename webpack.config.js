@@ -10,14 +10,15 @@ export default {
 		clean: true,
 	},
 	devtool: "eval-source-map",
-  devServer: {
-    watchFiles: ["./src/template.html"],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/template.html",
-    }),
-  ],	
+	devServer: {
+		watchFiles: ["./src/template.html"],
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: "./src/template.html",
+			favicon: "./src/Los_Pollos_Hermanos_logo.ico"
+		}),
+	],
 	module: {
 		rules: [
 			{
