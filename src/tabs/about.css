@@ -1,0 +1,14 @@
+.about .container {
+  padding: var(--section-padding) 0;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeAnimation 1s;
+}
+.about .container .founderImage {
+  width: 400px;
+}
+.about .container .founderText {
+  text-align: center;
+}

@@ -1,6 +1,6 @@
-:root{
-    --primary-color: #f16405;
-    --section-padding: 3rem;
+:root {
+  --primary-color: #f16405;
+  --section-padding: 3rem;
 }
 
 * {
@@ -63,13 +63,53 @@ header .logo {
   }
 }
 
+/* Footer */
+
+footer {
+  padding: 15px;
+  background-color: rgb(243, 243, 243);
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+@media screen and (max-width: 800px) {
+  footer img {
+    display: none;
+  }
+}
+footer h1 {
+  padding: 0 2rem;
+  font-size: 2.5rem;
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+footer .container .contact {
+  font-size: 1.2rem;
+}
+footer .contact .numbers {
+  display: flex;
+  gap: 1rem;
+}
+footer .contact .location {
+  padding-top: 2rem;
+}
+footer .placeImage {
+  width: 200px;
+}
+
 @keyframes fadeAnimation {
-    0%,50%{
+  0%,
+  50% {
     opacity: 0;
-        margin-top: 10px;
-    }
-    50%, 100%{
-        margin-top: 0;
-        opacity: 1;
-    }
+    margin-top: 10px;
+  }
+  50%,
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
 }
