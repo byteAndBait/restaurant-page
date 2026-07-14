@@ -1,14 +1,34 @@
-.about .container {
-  padding: var(--section-padding) 0;
+.container {
+  padding: var(--section-padding) 4em;
   gap: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   animation: fadeAnimation 1s;
 }
-.about .container .founderImage {
-  width: 400px;
+.container .founderImage {
+  width: 300px;
+  border-radius: 10px;
 }
-.about .container .founderText {
-  text-align: center;
+.container .founderText {
+  width: 50%;
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
+.container .founderText .socialLinks {
+  margin-top: 10px;
+  display: flex;
+  gap: 3px;
+  a {
+    text-decoration: none;
+    color: black;
+
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  a:hover {
+    color: orange;
+  }
 }
