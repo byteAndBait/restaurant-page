@@ -1,6 +1,6 @@
 :root {
   --primary-color: #f16405;
-  --section-padding: 3rem;
+  --section-padding: 3.5rem;
 }
 
 * {
@@ -13,10 +13,16 @@ body {
   height: 100vh;
   height: 100dvh;
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 .container {
   width: 80%;
   margin: 0 auto;
+}
+#content{
+  flex:1;
+  padding: var(--section-padding) 0;
 }
 /* Header Styling */
 
